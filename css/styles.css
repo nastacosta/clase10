@@ -7,12 +7,12 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-y: auto;
+
 }
 
 header {
     background-color: #1CD1B0;
-    width: 100%;
     font-size: 1.2vw;
     font-weight: 500;
     padding: 0.5vw;
@@ -22,12 +22,36 @@ header {
 nav {
     position: sticky;
     top: 0;
-    width: 100%;
     background-color: #00669F;
-    font-size: 3vw;
-    padding: 2vw;
+    font-size: 2vw;
+    color: white;
+    padding: 2.5vw 0 2.5vw 12vw;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    z-index: 1;
+    z-index: 2;
+}
+
+nav img {
+    position: absolute;
+    width: 10vw;
+    top: 0.7vw;
+    left: 0;
+}
+
+nav div {
+    position: absolute;
+    background-color: #001D2D;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 2.3vw;
+    bottom: -2.3vw;
+    left: 0;
+}
+
+nav div p {
+    margin-right: 1.2vw;
+    font-size: 1.2vw;
 }
 
 main {
@@ -38,11 +62,11 @@ main {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    gap: 2.7vw;
+    column-gap: 2.7vw;
 }
 
 .plus-sign {
-    z-index: -1;
+    z-index: 1;
     text-align: center;
     color: white;
     font-size: 4vw;
@@ -55,7 +79,7 @@ main {
     height: 6vw;
     top: calc(50% - 3.5vw);
     right: 1vw;
-    display: none;
+    text-decoration: none;
 }
 
 article {
@@ -168,7 +192,6 @@ article button {
 
 footer {
     background-color: #00669F;
-    width: 100%;
     color: white;
     font-size: 1.2vw;
     padding: 1vw;
@@ -182,10 +205,118 @@ footer img {
     display: none;
 }
 
+/* ADD HERO */
+
+.box {
+    position: relative;
+    margin-top: -5vw;
+    margin-bottom: -7vw;
+    background-color: #00669F;
+    border-radius: 3vw;
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    color: white;
+}
+
+.box h1 {
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.box h3 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+.inputbox {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    column-gap: 5%;
+}
+
+button {
+    position: relative;
+    margin-top: 2vw;
+    left: 40%;
+    font-size: 3vw;
+    font-weight: 900;
+    background-color: #1CD1B0;
+    height: 6vw;
+    width: 30vw;
+    border-radius: 1.7vw;
+    outline: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+input, select, label, textarea {
+    border-radius: 1vw;
+    width: 100%;
+    margin: 5% 0;
+    font-size: 1.4vw;
+    outline: transparent;
+    border: transparent;
+}
+
+input, select {
+    width: calc(100% - 2vw);
+    padding: 1.3vw 1vw;
+}
+
+input[type=file] {
+    color: black;
+}
+
+#fecha {
+    font-size: 1vw;
+}
+
+select {
+    width: 100%;
+}
+
+textarea {
+    width: calc(100% - 2vw);
+    padding: 1vw;
+    font-size: 1.2vw;
+    resize: none;
+}
+
+textarea::placeholder {
+    font-size: 1.5vw;
+}
+
+.checkboxes, .radios {
+    height: 1.9vw;
+    width: 1.9vw;
+    margin: unset;
+    margin-bottom: 1vw;
+}
+
+.inputbox span {
+    display: block;
+    height: fit-content;
+}
+
+.inputbox span label {
+    position: relative;
+    top: -0.4vw;
+    left: 1.4vw;
+}
+
+hr {
+    margin: 1.15vw 0;
+}
+
+
 @media (max-width: 900px) {
 
     main {
-        gap: 8vw;
+        column-gap: 8vw;
     }
 
     header {
@@ -196,17 +327,13 @@ footer img {
         color: white;
     }
 
-    .plus-sign {
-        display: block;
-    }
-
-    .card-batman {
+    .card-batman {  
         order: -2;
     }
 
     .card-maravilla {
         order: -1;
-        display: block;
+        display: unset;
     }
 
     .card-harley {
