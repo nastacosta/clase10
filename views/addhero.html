@@ -11,7 +11,7 @@
 <body>
     <header>Descuentos 20%</header>
     <nav>
-        <h1><img src="../img/Logo.png" alt="">Nombre Tienda</h1>
+        <a style="text-decoration: none;color: inherit;" href="../index.html"><h1><img src="../img/Logo.png" alt="">Nombre Tienda</h1></a>
         <div>
             <p>Contacto</p>
             <p>Registrarme</p>
@@ -20,7 +20,7 @@
     </nav>
     <main>
         <section class="box">
-            <h1>Añadí tu super!</h1>
+            <h2>Añadí tu super!</h2>
             <h3>Agregá tu personaje favorito completando las opciones.</h3>
             <form action="" class="inputbox">
                 <div class="inputbox_1">
@@ -33,8 +33,13 @@
                 </div>
                 <div class="inputbox_2">
                     <label for="especie">*Especie</label>
-                    <select name="especie" id="especie">
-                        <option value="Especie">Especie</option>
+                    <select name="especie" id="especie" required>
+                        <option value="" selected disabled>Especie</option>
+                        <option value="Humano">Humano</option>
+                        <option value="Extraterrestre">Extraterrestre</option>
+                        <option value="Mutante">Mutante</option>
+                        <option value="Robot">Robot</option>
+                        <option value="Desconocida">Desconocida</option>
                     </select>
                     <br><br>
                     <label for="foto">Agregar Foto</label>
@@ -51,7 +56,7 @@
                     <span><input type="radio" class="radios" name="tipo" value="heroe" required><label>Héroe / Heroína</label></span>
                     <span><input type="radio" class="radios" name="tipo" value="villano" required><label>Villano / Villana</label></span>
                 </div>
-                <button> Añadir</button>
+                <button class="boton"> Añadir</button>
             </form>
         </section>
     </main>

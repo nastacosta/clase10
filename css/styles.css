@@ -82,6 +82,10 @@ main {
     text-decoration: none;
 }
 
+.plus-sign:hover {
+    background-color: #001D2D;
+}
+
 article {
     position: relative;
     background-color: #F3F3F3;
@@ -174,7 +178,7 @@ article p {
     color: #333333;
 }
 
-article button {
+button {
     position: absolute;
     left: 0;
     right: 0;
@@ -188,6 +192,11 @@ article button {
     font-size: 1.3vw;
     padding: 1.5vw 0;
     cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #001D2D;
+    color: white;
 }
 
 footer {
@@ -221,7 +230,7 @@ footer img {
     color: white;
 }
 
-.box h1 {
+.box h2 {
     font-size: 3vw;
     font-weight: 600;
 }
@@ -238,7 +247,8 @@ footer img {
     column-gap: 5%;
 }
 
-button {
+.boton {
+    transition: all ease 0.2s;
     position: relative;
     margin-top: 2vw;
     left: 40%;
@@ -248,6 +258,7 @@ button {
     height: 6vw;
     width: 30vw;
     border-radius: 1.7vw;
+    line-height: 1vw;
     outline: transparent;
     border: transparent;
     cursor: pointer;
@@ -276,7 +287,16 @@ input[type=file] {
 }
 
 select {
+    color: grey;
     width: 100%;
+}
+
+select option {
+    color: black;
+}
+
+select:valid {
+    color: black;
 }
 
 textarea {
@@ -288,6 +308,10 @@ textarea {
 
 textarea::placeholder {
     font-size: 1.5vw;
+}
+
+textarea:focus::placeholder {
+    visibility: hidden;
 }
 
 .checkboxes, .radios {
